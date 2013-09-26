@@ -70,6 +70,15 @@
 						<label class="control-label" for="login-inputName" localization>username</label>
 						<div class="controls">
 							<input type="text" id="login-inputName" onkeydown="pressenter(arguments[0],login)" />
+							<p id = "task2"></p>
+							<script type="text/javascript">
+							$(document).ready(function(){								
+								$("#login-inputName").click(function(){
+									document.getElementById("task2").innerHTML="（只能使用字母和数字）";
+								})
+							});
+							
+							</script>
 						</div>
 					</div>
 					<div class="control-group">
