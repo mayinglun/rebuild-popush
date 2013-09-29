@@ -1,5 +1,8 @@
 * {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;word-break:break-all;word-wrap:break-word;}
-h1, h2, h3, h4, h5, h6 {font-weight:normal;}
+h1, h3, h4, h5, h6 {font-weight:normal;}
+h2 {
+    font-weight: bold;
+}
 input, button {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;}
 
 .switch-rel {margin:5px 0 0 120px;}
@@ -100,3 +103,16 @@ textarea {resize:none;}
 #fullscreentip {display:none;position:absolute;z-index:10000;left:0px;top:10px;}
 
 .userlistimg {min-width:32px;min-height:32px;}
+
+.blink {
+    color: white;
+    background-color: lightblue;
+    font-family: YouYuan;
+    font-weight:bold;
+}
+
+.control-label {
+    color: lightblue;
+    font-size: 20px;
+    font-family: YouYuan;
+}
