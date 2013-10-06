@@ -9,6 +9,8 @@
 	<script type="text/javascript" src="js/conf.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/backbone.js"></script>
 	<script type="text/javascript" src="js/socket.io.min.js"></script>
 	<script type="text/javascript" src='js/firebase.js'></script>
 	<script type="text/javascript" src="js/newMultiConnection.js"></script>
@@ -17,13 +19,13 @@
 	<script type="text/javascript" src="js/loadmode.js"></script>
 	<script type="text/javascript" src="js/localization/zh-cn.js"></script>
 	<script type="text/javascript" src="js/ie.js"></script>
-	<script type="text/javascript" src="js/filelist.js"></script>
-	<script type="text/javascript" src="js/userlist.js"></script>
-	<script type="text/javascript" src="js/expressionlist.js"></script>
-	<script type="text/javascript" src="js/popush.js"></script>
-	<script type="text/javascript" src="js/room.js"></script>
+	
+	
+	
+	
 </head>
 <body style="display:none;">
+<div id="all">
 	<div class="hero-unit" id="big-one">
 		<div class="container">
 			<div class="row">
@@ -32,7 +34,6 @@
 			</div>
 		</div>
 	</div>
-	<button type="button" onclick="window.location.href='index2.html'">切换至英文</button>
 	<div class="navbar navbar-fixed-top hide" id="nav-head">
 		<div class="navbar-inner">
 			<div class="container" style="width: auto; padding: 0 20px;">
@@ -93,8 +94,9 @@
 					<div class="control-group">
 						<p align="center" id="loading-init" style="margin:1px 0 2px 0"><img src="images/init.gif"/></p>
 						<div class="controls hide" id="login-control" style="display:none;">
-							<button type="submit" class="btn" onclick="login();" localization>login</button>
-							<a class="switch-rel" href="javascript:;" onclick="registerview()" localization>register</a>
+							<button type="submit" id ="log-btn" class="btn" localization>login</button>
+							<button  id ="toRegister" class="btn" localization>register</button>
+							<!-- <a class="switch-rel" id = "toRegister" href="javascript:;" localization>register</a> -->
 						</div>
 					</div>
 				</div>
@@ -114,6 +116,15 @@
 						<label class="control-label" for="register-inputName" localization>username</label>
 						<div class="controls">
 							<input type="text" id="register-inputName" onkeydown="pressenter(arguments[0],register)" />
+							<p id = "task1"></p>
+							<script type="text/javascript">
+							$(document).ready(function(){								
+								$("#register-inputName").click(function(){
+									document.getElementById("task1").innerHTML="（只能使用字母和数字）";
+								})
+							});
+							
+							</script>
 						</div>
 					</div>
 					<div class="control-group">
@@ -130,8 +141,9 @@
 					</div>
 					<div class="control-group">
 						<div class="controls" id="register-control">
-							<button type="submit" class="btn" onclick="register();" localization>register</button>
-							<a class="switch-rel" href="javascript:;" onclick="loginview()" localization>login</a>
+							<button type="submit" id="reg-btn" class="btn"  localization>register</button>
+							<button  id ="toLogin" class="btn" localization>login</button>
+							<!-- <a class="switch-rel" id="toLogin" href="javascript:;" localization>login</a> -->
 						</div>
 					</div>
 				</div>
@@ -427,5 +439,15 @@
 		</div>
 
 	</div>
+</div>
+	<script type="text/javascript" src="js/filelist.js"></script>
+	<script type="text/javascript" src="js/userlist.js"></script>
+	<script type="text/javascript" src="js/expressionlist.js"></script>
+	<script type="text/javascript" src="js/mainView.js"></script>
+	<script type="text/javascript" src="js/logregView.js"></script>
+	<script type="text/javascript">
+	var App = new app.indexView;
+	</script>
+
 </body>
 </html>

@@ -6,14 +6,16 @@ h2 {
 input, button {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;}
 
 .switch-rel {margin:5px 0 0 120px;}
-
-.hero-unit {background-image:url(../images/back.png);color:#ddd;overflow:hidden;}
+/*#csstest{background-image:url(../images/4.jpg);color:#ddd;overflow:hidden;}*/
+.hero-unit {background-image:url(../images/ts1.jpg);color:#ddd;overflow:hidden;}
 .hero-unit {-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .hero-unit a {text-decoration:none;}
 .hero-unit a:hover {text-decoration:none;}
 
 .hero-unit {min-width:820px;}
 .container-fluid {min-width:900px;}
+.offset4{border-style: outset;border-color: grey;background-image: url(../images/ts3.jpg);}
+.container-fluid{background-image: url(../images/11.jpg);}
 
 #nav-avatar {min-height:32px;min-width:32px;max-height:32px;max-width:32px;margin:-10px 5px;}
 .shared-character {min-height:40px;min-width:40px;max-height:40px;max-width:40px;filter:alpha(opacity=40);-moz-opacity:0.4;-khtml-opacity:0.4;opacity:0.4;}
@@ -105,14 +107,15 @@ textarea {resize:none;}
 .userlistimg {min-width:32px;min-height:32px;}
 
 .blink {
-    color: white;
-    background-color: lightblue;
+    color:black;
+    /*border-style: ridge;
+    border-color:lightblue;*/
     font-family: YouYuan;
     font-weight:bold;
 }
 
 .control-label {
-    color: lightblue;
+    color: black;
     font-size: 20px;
-    font-family: YouYuan;
+    font-family: lishu;
 }
